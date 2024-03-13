@@ -1,5 +1,8 @@
 package telran.probes.dto;
+
 import jakarta.validation.constraints.NotNull;
-public record SensorEmails(@NotNull(message="missing sensor id value")long id, String[]mails) {
+import static telran.probes.messages.ErrorMessages.*;
+public record SensorEmails(@NotNull(message = MISSING_EMAILS) long id,
+		@NotNull(message=MISSING_EMAILS) String[] mails) {
 
 }
